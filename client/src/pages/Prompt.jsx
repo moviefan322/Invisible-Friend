@@ -2,15 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {
   Card,
+  CardHeader,
   CardBody,
   Button,
+  Heading,
   Stack,
   Box,
   StackDivider,
   Input,
   FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Center,
+  Text,
+  ButtonGroup,
+  Textarea,
   InputRightElement,
   InputGroup,
+  HStack,
 } from '@chakra-ui/react';
 import { useMutation, useLazyQuery } from '@apollo/client';
 import {
@@ -25,7 +35,6 @@ import {
 } from '../utils/mutations';
 import Message from '../subcomponents/Message';
 import PromptHeader from '../subcomponents/PromptHeader';
-import audioIcon from '../assets/images/audioIcon.png';
 
 // Prompt component for interacting with a chatbot (Friend or Expert)
 export default function Prompt(props) {
