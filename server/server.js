@@ -1,6 +1,5 @@
 // express
 require('dotenv').config();
-console.log('API Key', process.env.OPENAI_API_KEY);
 const express = require('express');
 // eslint-disable-next-line
 const colors = require('@colors/colors');
