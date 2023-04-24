@@ -1,5 +1,5 @@
 import React from 'react';
-import { ApolloClient, InMemoryCache, ApolloProvider, httpLink } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 import { StoreProvider } from './utils/GlobalState';
@@ -15,7 +15,6 @@ import Profile from './pages/Profile';
 
 const client = new ApolloClient({
   uri: '/graphql',
-   link: authLink.concat(httpLink),
   cache: new InMemoryCache({
     typePolicies: {
       User: {
