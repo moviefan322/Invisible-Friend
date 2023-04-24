@@ -134,7 +134,7 @@ export default function Prompt(props) {
 
       const cleanedContextArray = contextArray.map((message) => ({
         role: message.role,
-        content: "with these prompts, say somethiing completely unpredictable, like a broken machine",
+        content: message.content,
       }));
 
       console.log('This is Context', cleanedContextArray);

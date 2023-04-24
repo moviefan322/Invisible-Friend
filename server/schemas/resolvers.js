@@ -100,17 +100,18 @@ const resolvers = {
         const completion = await openai.createChatCompletion({
           model: 'gpt-3.5-turbo',
           messages: [
-            {
-              role: 'user',
-              content: generatePrompt(
-                friendType,
-                temperament,
-                language,
-                age,
-                name
-              ),
-            },
-            ...input,
+            // {
+            //   role: 'user',
+            //   content: generatePrompt(
+            //     friendType,
+            //     temperament,
+            //     language,
+            //     age,
+            //     name
+            //   ),
+            // },
+            // ...input,
+            "say something",
           ],
           temperature: 0.6,
           max_tokens: 250,
