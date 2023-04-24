@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql',
+  uri: '/graphql',
    link: authLink.concat(httpLink),
   cache: new InMemoryCache({
     typePolicies: {

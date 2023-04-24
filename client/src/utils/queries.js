@@ -4,7 +4,7 @@ export const QUERY_USERS = gql`
   query allUsers {
     users {
       _id
-      name
+      username
       email
       friends {
         _id
@@ -40,7 +40,7 @@ export const USER = gql`
       email
       friends {
         _id
-        name
+        username
         language
         age
         mood
