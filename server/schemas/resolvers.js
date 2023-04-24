@@ -3,7 +3,7 @@ const { generatePrompt } = require('../utils/chatgpt');
 const { signToken } = require('../utils/auth');
 const configuration = new Configuration({
   organization: 'org-sMYqIiwDshw3aO1opcm1AbvS',
-  apiKey: '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',
+  apiKey: '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',
 });
 const { AuthenticationError } = require('apollo-server-express');
 const openai = new OpenAIApi(configuration);
@@ -100,17 +100,17 @@ const resolvers = {
         const completion = await openai.createChatCompletion({
           model: 'gpt-3.5-turbo',
           messages: [
-            // {
-            //   role: 'user',
-            //   content: generatePrompt(
-            //     friendType,
-            //     temperament,
-            //     language,
-            //     age,
-            //     name
-            //   ),
-            // },
-            // ...input,
+            {
+              role: 'user',
+              content: generatePrompt(
+                friendType,
+                temperament,
+                language,
+                age,
+                name
+              ),
+            },
+            ...input,
             "say something",
           ],
           temperature: 0.6,
