@@ -1,17 +1,4 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 export default function Message({ role, content }) {
-  const [text, setText] = useState('Hello this is a test');
-
-
-  return (
-    <div
-      className={`message ${role}`}
-      onClick={() => {
-        handleOnClick(content);
-      }}
-    >
-      {content}
-    </div>
-  );
+  return <div className={`message ${role}`}>{content}</div>;
 }
