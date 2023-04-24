@@ -3,7 +3,7 @@ const { generatePrompt } = require('../utils/chatgpt');
 const { signToken } = require('../utils/auth');
 const configuration = new Configuration({
   organization: 'org-sMYqIiwDshw3aO1opcm1AbvS',
-  apiKey: process.env.OPEN_AI_API_KEY,
+  apiKey: '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',
 });
 const { AuthenticationError } = require('apollo-server-express');
 const openai = new OpenAIApi(configuration);
